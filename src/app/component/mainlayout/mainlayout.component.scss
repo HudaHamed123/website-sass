@@ -1,0 +1,122 @@
+$flexed:flex;
+$heighth:100vh;
+$pointer: pointer;
+$padding:10px;
+$color: #F29724;
+$orange-light: #FFB84D;
+$cil:white;
+$margin:20px 0;
+$transtion:all 0.8s;
+$scale:scale(1.1);
+$width:100%;
+$shadow-xl: 0 20px 30px rgba(0, 0, 0, 0.1);
+$shadow-2xl: 0 25px 50px rgba(0, 0, 0, 0.2);
+$primary-color: #1d4ed8;
+$footer-text-color: #6b7280; 
+$logo-height: 2rem; 
+$font-size-lg: 1.25rem;
+$width:100%;  
+
+%common{
+  border-radius: 15px;
+  margin: 10px;
+  font-weight: 600;
+  font-size: 18px;
+  
+};
+  .sidebar{
+   
+      img{
+        width:$width ;
+      }  
+      ul {
+       
+          .meals{
+            background-color:$color ;
+            box-shadow: 0 4px 6px 0 $orange-light ;
+            box-shadow: none;
+            color: $cil;}
+         
+          li {
+            @extend %common;
+            cursor:$pointer;
+            margin: $margin;
+            transition:$transtion ;
+            
+            &:hover{
+              transform:$scale;
+             box-shadow: none;
+             box-shadow: $shadow-xl;
+          
+
+            }
+            svg{
+                margin: $padding;
+              }
+            }
+      }
+
+      }
+
+  
+
+.container {
+  width: 100%;
+  max-width: 1280px; // max-w-screen-xl
+  margin: 0 auto;
+  padding: 1rem;
+  position: relative;
+  z-index: 55;
+  background-color: white;
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+
+      .logo-img {
+        height: $logo-height;
+        width:$width;
+      }
+
+      .logo-text {
+        font-size: $font-size-lg;
+        font-weight: 600;
+        white-space: nowrap;
+      
+      }
+    }
+
+    .route {
+      font-size: $font-size-lg;
+      font-weight: bold;
+      color: $primary-color;
+    }
+  }
+
+  hr {
+    margin: 1.5rem 0;
+    border-color: #e5e7eb; // border-gray-200
+  }
+
+  .footer {
+    font-size: 0.875rem; // text-sm
+    color: $footer-text-color; // text-gray-500
+
+    a {
+      list-style: none;
+      text-decoration: none;
+    
+      color: $primary-color;
+
+      
+    }
+
+    text-align: center;
+  }
+}
